@@ -11,16 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-/**
- *
- * @author FLEX5
- */
 public class PHBMediaPlayer extends Application {
 
     @Override
-
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocumen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("PHB Media Player");
@@ -34,12 +29,8 @@ public class PHBMediaPlayer extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
-        // TODO code application logic here
     }
-
 }
+

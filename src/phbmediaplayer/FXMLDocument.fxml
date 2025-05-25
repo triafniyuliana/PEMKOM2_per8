@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phbmediaplayer.FXMLDocumentController" prefHeight="400.0" prefWidth="700.0">
+   <bottom>
+      <VBox prefHeight="70.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="seek" />
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <MenuButton text="Open...">
+                     <items>
+                        <MenuItem text="Open MP3 File(s)" onAction="#openFiles" />
+                     </items>
+                  </MenuButton>
+                  <Button text="&lt;&lt;" onAction="#seekBackward" />
+                  <Button text="&lt;" onAction="#backward" />
+                  <Button text="Stop" onAction="#stop" />
+                  <Button fx:id="playPause" text="Play" onAction="#pausePlay" />
+                  <Button text="&gt;" onAction="#forward" />
+                  <Button text="&gt;&gt;" onAction="#seekForward" />
+                  <Slider fx:id="volume" prefWidth="100.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+
+   <center>
+      <HBox spacing="20.0" alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="sPane" prefWidth="400.0" prefHeight="300.0">
+               <children>
+                  <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="400.0" />
+               </children>
+            </StackPane>
+            <VBox spacing="5.0" alignment="TOP_CENTER" prefWidth="200.0">
+               <children>
+                  <Label text="Playlist" />
+                  <ListView fx:id="playlistView" onMouseClicked="#handlePlaylistClick" prefHeight="300.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
+
+
+
+
+
+
